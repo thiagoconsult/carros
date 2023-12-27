@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title><%= title %></title>
+</head>
+<body>
+    <header>
+        <h1>
+            <%= title %>
+        </h1>
+    </header>
+
+    <nav>
+        <a href="/carros">Home</a>
+        <a href="/carros">Lista de Carros</a>
+        <a href="/carros/cadastro">Cadastro</a>
+    </nav>
+
+    <main>
+        <form id="form_novo_carro" method="POST" action="/carros">
+            <label>
+                Nome:
+                <input type="text" name="nome" id="form_input">
+            </label>
+            <label>
+                Montadora:
+                <input type="text" name="montadora" id="form_input">
+            </label>
+            <label>
+                Ano:
+                <input type="text" name="ano" id="form_input">
+            </label>
+            <label>
+                Cor:
+                <input type="text" name="cor" id="form_input">
+            </label>
+            <button type="submit" id="btn_salvar">Salvar</button>
+        </form>
+    </main>
+
+    <footer>
+        <h3>
+            <%= title %>
+        </h3>
+    </footer>
+    
+</body>
+</html>

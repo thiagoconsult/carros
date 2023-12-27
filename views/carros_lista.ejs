@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title><%= title %></title>
+</head>
+<body>
+
+<header>
+    <h1>
+        <%= title %>
+    </h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Lista de Carros</a>
+    <a href="/carros/cadastro">Cadastro</a>
+</nav>
+
+<main>
+
+    <h2>
+        <%= subtitle %>
+    </h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Montadora</th>
+                        <th>Ano</th>
+                        <th>Cor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <% lista.forEach((carro) => {%>
+                
+                            <tr>
+                                <td><%= carro.nome %></td>
+                                <td><%= carro.montadora %></td>
+                                <td><%= carro.ano %></td>
+                                <td><%= carro.cor %></td>
+                            </tr>
+                    <% }) %>
+
+                </tbody>
+            </table>
+
+</main>
+
+<footer><h3><%= title %></h3></footer>
+</body>
+</html>
